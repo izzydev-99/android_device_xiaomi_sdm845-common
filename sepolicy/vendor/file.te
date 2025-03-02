@@ -15,3 +15,6 @@ type vendor_convergence_data_file, data_file_type, file_type;
 type vendor_fingerprint_data_file, data_file_type, file_type;
 type vendor_gps_data_file, data_file_type, file_type;
 type vendor_thermal_data_file, data_file_type, file_type;
+
+# sysfs
+type sysfs_torch, sysfs_type, fs_type;

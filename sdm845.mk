@@ -113,6 +113,8 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl:32 \
     android.hardware.camera.provider@2.4-service
 
+$(call soong_config_set,libcameraservice,ext_lib,//$(LOCAL_PATH):libcameraservice_extension.sdm845)
+
 # Common init scripts
 PRODUCT_PACKAGES += \
     init.mi.btmac.sh \
