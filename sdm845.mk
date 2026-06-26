@@ -128,10 +128,6 @@ PRODUCT_PACKAGES += \
     init.qti.dcvs.sh \
     ueventd.qcom.rc
 
-# Configstore
-PRODUCT_PACKAGES += \
-    disable_configstore
-
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
