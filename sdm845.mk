@@ -172,6 +172,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/sdm845-tavil-snd-card_Button_Jack.kl:system/usr/keylayout/sdm845-tavil-snd-card_Button_Jack.kl
 
+# ION
+$(call soong_config_set_bool,libion,legacy_impl,true)
+
 # IPA
 PRODUCT_PACKAGES += \
     ipacm \
