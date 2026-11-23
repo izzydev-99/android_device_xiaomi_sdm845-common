@@ -308,11 +308,5 @@ PRODUCT_PACKAGES += \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink
 
-# WiFi Display
-# libwfdservice links the older audio common types; the platform uses a
-# newer version, so install the one it needs alongside it.
-PRODUCT_PACKAGES += \
-    android.media.audio.common.types-V4-cpp
-
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/sdm845-common/sdm845-common-vendor.mk)
