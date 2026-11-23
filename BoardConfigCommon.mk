@@ -99,6 +99,10 @@ BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor
 BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 5163188224 # (BOARD_SUPER_PARTITION_SIZE - 4194304) 4MiB overhead
 
+# Vanilla builds: the default 1.96 GB product reservation for flashable
+# GApps overflows the super partition, so reserve ~1.19 GB instead.
+# No effect on WITH_GAPPS builds.
+BOARD_PRODUCTIMAGE_MINIMAL_PARTITION_RESERVED_SIZE := true
 include vendor/infinity/config/BoardConfigReservedSize.mk
 
 BOARD_USES_METADATA_PARTITION := true
