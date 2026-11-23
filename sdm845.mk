@@ -14,7 +14,10 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
-PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := true
+# Android 17 framework matrices have no kernel FCM level 6 entries, so the
+# 4.19 kernel cannot be matched at build time (it meets the 4.19.325 LTS
+# minimum). This only skips the build-time kernel requirements check.
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
