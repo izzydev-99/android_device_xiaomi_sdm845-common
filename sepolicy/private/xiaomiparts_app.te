@@ -1,4 +1,4 @@
-type xiaomiparts_app, domain;
+type xiaomiparts_app, domain, coredomain;
 typeattribute xiaomiparts_app mlstrustedsubject;
 
 app_domain(xiaomiparts_app)
